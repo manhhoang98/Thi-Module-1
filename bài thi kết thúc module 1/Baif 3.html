@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let x = parseInt(prompt("nhap vao so nguyen x ngau nhien :"));
+  let tong = 0;
+  function sumOfListPrime(x) {
+      for (let i = 2; i < x ; i++) {
+          let check = true;
+          for (let j = 2; j < i; j++) {
+              if (i % j === 0) {
+                  check = false;
+                  break;
+              }
+          }
+
+              if (check) {
+                  tong += i;
+              }
+          }
+          return tong;
+      }
+          sumOfListPrime(x);
+          document.write("ket qua la :"+ tong);
+</script>
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<canvas id="canvas" ></canvas>
+</body>
+</html>
+<script>
+    class Rectangle{
+        x;
+        y;
+        width;
+        height;
+        color;
+        constructor(x,y,width,height,color) {
+            this.x=x;
+            this.y=y;
+            this.width=width;
+            this.height=height;
+            this.color=color;
+        }
+        render(canvas) {
+            let ctx = canvas.getContext("2d")
+            ctx.fillStyle = this.color;
+            ctx.fillRect(this.x, this.y, this.width, this.height);
+        }
+    }
+    let canvas = document.getElementById("canvas");
+    let rect1 = new Rectangle(50,50,200,100," max hex");
+    rect1.render(canvas);
+
+</script>
